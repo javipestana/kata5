@@ -30,6 +30,7 @@ public class MainFrame extends JFrame {
     private Menu calculate() {
         Menu menu = new Menu("File");
         menu.add(NewExchange());
+        menu.add(Close());
         return menu;
     }
 
@@ -45,6 +46,23 @@ public class MainFrame extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 System.out.println("PULSÉ EN NEW");
+            }
+            
+        };
+    }
+
+    private MenuItem Close() {
+        MenuItem menuItem = new MenuItem("Close");
+        menuItem.addActionListener(doClose());
+        return menuItem;
+    }
+
+    private ActionListener doClose() {
+        return new ActionListener(){
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                System.out.println("PULSÉ EN CLOSE");
             }
             
         };
