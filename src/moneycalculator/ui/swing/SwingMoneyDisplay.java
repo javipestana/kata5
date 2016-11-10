@@ -1,4 +1,4 @@
-package SwingMoneyDisplay.ui.swing;
+package moneycalculator.ui.swing;
 
 public class SwingMoneyDisplay {
     
