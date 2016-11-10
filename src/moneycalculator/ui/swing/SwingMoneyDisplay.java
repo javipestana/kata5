@@ -1,5 +1,8 @@
 package moneycalculator.ui.swing;
 
-public class SwingMoneyDisplay {
+import javax.swing.JPanel;
+import moneycalculator.ui.MoneyDisplay;
+
+public class SwingMoneyDisplay extends JPanel implements MoneyDisplay{
     
 }
