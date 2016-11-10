@@ -8,11 +8,13 @@ import java.awt.HeadlessException;
 import java.awt.Menu;
 import java.awt.MenuBar;
 import java.awt.MenuItem;
+import java.awt.PopupMenu;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import moneycalculator.ui.swing.SwingMoneyDisplay;
 
 public class MainFrame extends JFrame {
     private int index = 0;
@@ -29,6 +31,7 @@ public class MainFrame extends JFrame {
         add(label(),BorderLayout.SOUTH);
         add(label(),BorderLayout.WEST);
         add(label(),BorderLayout.EAST);
+        add(moneyDisplay());
         setVisible(true);
     }
 
@@ -84,6 +87,12 @@ public class MainFrame extends JFrame {
         panel.setLayout(new FlowLayout(FlowLayout.CENTER));
         panel.add(new JLabel("A" + index++ ));
         return panel;
+    }
+
+    private JPanel moneyDisplay() {
+        SwingMoneyDisplay swingMoneyDisplay = new SwingMoneyDisplay();
+        return swingMoneyDisplay;
+                
     }
     
 }
